@@ -227,17 +227,17 @@ Use this as a checklist to keep track of your progress.
 3. [x] 2.3 Find all day pass purchases
 
 #### 3. Equipment Management (equipment_management.sql)
-1. [ ] 3.1 Find equipment due for maintenance in the next 30 days
-2. [ ] 3.2 Count equipment types in stock
-3. [ ] 3.3 Calculate average age of equipment by type (in days)
+1. [x] 3.1 Find equipment due for maintenance in the next 30 days
+2. [x] 3.2 Count equipment types in stock
+3. [x] 3.3 Calculate average age of equipment by type (in days)
 
 #### 4. Class Scheduling (class_scheduling.sql)
-1. [ ] 4.1 List all classes with their instructors
-2. [ ] 4.2 Find available classes for a specific date
-3. [ ] 4.3 Register a member for a class
-4. [ ] 4.4 Cancel a class registration
-5. [ ] 4.5 List top 3 most popular classes
-6. [ ] 4.6 Calculate average number of classes per member
+1. [x] 4.1 List all classes with their instructors
+2. [x] 4.2 Find available classes for a specific date
+3. [x] 4.3 Register a member for a class
+4. [x] 4.4 Cancel a class registration
+5. [x] 4.5 List top 3 most popular classes
+6. [x] 4.6 Calculate average number of classes per member
 
 #### 5. Membership Management (membership_management.sql)
 1. [ ] 5.1 List all active memberships
