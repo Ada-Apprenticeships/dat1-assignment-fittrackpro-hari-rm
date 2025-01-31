@@ -22,14 +22,6 @@ DROP TABLE IF EXISTS personal_training_sessions;
 DROP TABLE IF EXISTS member_health_metrics;
 DROP TABLE IF EXISTS equipment_maintenance_log;
 
--- Create your tables here
--- Example:
--- CREATE TABLE table_name (
---     column1 datatype,
---     column2 datatype,
---     ...
--- );
-
 -- TODO: Create the following tables:
 -- 1. locations
 CREATE TABLE locations (
@@ -37,7 +29,7 @@ CREATE TABLE locations (
     name VARCHAR(255) NOT NULL,
     address VARCHAR(255) NOT NULL,
     phone_number VARCHAR(20),
-    email VARCHAR(255),
+    email VARCHAR(255) NOT NULL CHECK (email LIKE '%_@__%.__%'),
     opening_hours VARCHAR(255)
 );
 
