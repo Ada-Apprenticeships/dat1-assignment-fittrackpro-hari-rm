@@ -21,13 +21,16 @@ ORDER BY position,
 -- 2. Find trainers with one or more personal training session in the next 30 days
 -- TODO: Write a query to find trainers with one or more personal training session in the next 30 days
 -- trainer_id | trainer_name | session_count
-SELECT s.staff_id AS trainer_id, 
-       CONCAT(s.first_name, ' ', s.last_name) AS trainer_name, 
+SELECT s.staff_id AS trainer_id,
+       CONCAT(s.first_name, ' ', s.last_name) AS trainer_name,
        COUNT(pts.session_id) AS session_count
 FROM staff s
-JOIN personal_training_sessions pts 
-ON s.staff_id = pts.staff_id
-WHERE s.position = 'Trainer' AND 
-      pts.session_date BETWEEN date('now') AND date('now', '+30 days')
-GROUP BY s.staff_id, s.first_name, s.last_name
+    JOIN personal_training_sessions pts
+        ON s.staff_id = pts.staff_id
+WHERE s.position = 'Trainer'
+      AND pts.session_date
+      BETWEEN date('now') AND date('now', '+30 days')
+GROUP BY s.staff_id,
+         s.first_name,
+         s.last_name
 ORDER BY session_count DESC;
