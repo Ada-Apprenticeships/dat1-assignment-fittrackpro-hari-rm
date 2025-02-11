@@ -69,6 +69,8 @@ LIMIT 1;
 
 -- 6. Calculate the percentage of members who have attended at least one class
 -- TODO: Write a query to calculate the percentage of members who have attended at least one class
+-- Divides the amount of members by the amount of members in the class attendance and multiplys by 100 
+-- to turn it into a percentage
 SELECT (COUNT(DISTINCT ca.member_id) * 100.0 / COUNT(DISTINCT m.member_id)) AS percentage_attended
 FROM members m
     LEFT JOIN class_attendance ca
